@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="900.0" styleClass="LPbackground" stylesheets="@LPcss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaproject.QuickTestController">
+   <top>
+      <AnchorPane prefHeight="159.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="336.0" layoutY="14.0">
+               <children>
+
+                  <Label prefHeight="54.0" prefWidth="291.0" text="Speed Typing" textFill="WHITE" HBox.hgrow="SOMETIMES">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="timeLabel" alignment="CENTER" layoutX="296.0" layoutY="80.0" prefHeight="61.0" prefWidth="248.0" text="00:00" textFill="WHITE">
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="83.0" prefWidth="900.0" style="-fx-background-color: eee;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="abortButton" layoutX="386.0" layoutY="18.0" onAction="#goToMainPage" prefHeight="46.0" prefWidth="127.0" styleClass="backspace" stylesheets="@tutorial.css" text="Abort Test" />
+            <JFXButton fx:id="fileButton" layoutX="530.0" layoutY="18.0" onAction="#chooseFile" prefHeight="46.0" prefWidth="127.0" styleClass="backspace" stylesheets="@tutorial.css" text="Choose File" />
+         </children></AnchorPane>
+   </bottom>
+   <left>
+      <AnchorPane prefHeight="374.0" prefWidth="115.0" style="-fx-background-color: eee;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="resultButton" layoutX="32.0" layoutY="196.0" mnemonicParsing="false" onAction="#switchSceneToResult" opacity="0.0" text="GoToResult" />
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="374.0" prefWidth="124.0" style="-fx-background-color: eee;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="timerButton" layoutX="36.0" layoutY="176.0" mnemonicParsing="false" opacity="0.04" text="timerSOS" />
+         </children></AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: eee;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #AAA; -fx-border-radius: 20;">
+               <children>
+                  <HBox fx:id="hBox2" prefHeight="49.0" prefWidth="659.0" styleClass="testBlockHbox">
+                     <children>
+
+                        <Label alignment="CENTER" layoutX="296.0" layoutY="80.0" prefHeight="61.0" prefWidth="248.0" text="You have one minute to finish your test" textFill="WHITE"/>
+
+                     </children>
+                  </HBox>
+                  <JFXTextArea fx:id="textDisplay" editable="false" focusColor="#405aa800" prefHeight="367.0" prefWidth="659.0" style="-fx-background-radius: 20; -fx-background-color: white;" unFocusColor="#4d4d4d00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </JFXTextArea>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
